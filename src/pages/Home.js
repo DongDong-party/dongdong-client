@@ -4,6 +4,7 @@ import StoreApi from "../api/StoreApi";
 import Store from "../components/Store";
 
 import "./Home.css";
+import Banner from "../components/Banner";
 
 class Home extends React.Component {
   state = {
@@ -25,11 +26,14 @@ class Home extends React.Component {
             <span className="loader__text"></span>
           </div>
         ) : (
-          <div className="stores">
-            {stores.map((store) => {
-              console.log(store);
-              return <Store key={store.storeId} store={store} />;
-            })}
+          <div>
+            <Banner />
+            <div className="stores">
+              {stores.map((store) => {
+                console.log(store);
+                return <Store key={store.storeId} store={store} />;
+              })}
+            </div>
           </div>
         )}
       </section>
