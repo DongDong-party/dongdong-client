@@ -1,6 +1,10 @@
 import React from "react";
 import StoreApi from "../api/StoreApi";
 
+import Store from "../components/Store";
+
+import "./Home.css";
+
 class Home extends React.Component {
   state = {
     isLoading: true,
@@ -23,7 +27,8 @@ class Home extends React.Component {
         ) : (
           <div className="stores">
             {stores.map((store) => {
-              return <p>{store.name}</p>;
+              console.log(store);
+              return <Store key={store.storeId} store={store} />;
             })}
           </div>
         )}
