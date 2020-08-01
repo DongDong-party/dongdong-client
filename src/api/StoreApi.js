@@ -1,5 +1,5 @@
 import axios from "axios";
-import ApiHost from "./ApiHost";
+import ApiHost from "../modules/ApiHost";
 
 class StoreApi {
   static async getList() {
