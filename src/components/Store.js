@@ -1,10 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
 
+import ImageLoader from "../modules/ImageLoader";
+
 function Store({ store }) {
   return (
     <div className="storeComponent">
-      <div className="storeImageSection">There is IMG</div>
+      <div className="storeImageSection">
+        <img
+          src={
+            ImageLoader.getPath() +
+            "cf8b8554-09ab-406b-845f-2e55a8630386KakaoTalk_Photo_2020-07-17-14-29-52.png"
+          }
+        />
+      </div>
       <div className="storeInfoSection">
         <ul>
           <li>{store.storeId}</li>
