@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { useState, useEffect } from "react";
 
 import ImageLoader from "../modules/ImageLoader";
+import StoreApi from "../api/StoreApi";
 
-function Store({ store }) {
+function StoreItem({ store }) {
   return (
     <div className="storeComponent">
       <div className="storeImageSection">
@@ -65,4 +65,35 @@ function Store({ store }) {
   );
 }
 
-export default Store;
+function StoreList() {
+  const [storeList, setStoreList] = useState([]);
+
+  useEffect(() => {
+    const init = async () => {
+      const { data } = await StoreApi.getList();
+      setStoreList(data);
+    };
+    init();
+  }, []);
+
+  return (
+    <div className="storeListContainer">
+      <div className="stores">
+        {storeList.map((store) => {
+          return <StoreItem key={store.storeId} store={store} />;
+        })}
+      </div>
+
+      <style jsx>{`
+        .stores {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-content: center;
+        }
+      `}</style>
+    </div>
+  );
+}
+
+export default StoreList;

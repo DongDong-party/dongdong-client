@@ -1,26 +1,19 @@
 import React from "react";
 import StoreApi from "../api/StoreApi";
 
-import Store from "../components/Store";
-
 import "./Home.css";
 import Banner from "../components/Banner";
 import Navigation from "../components/Navigation";
 import SearchBar from "../components/SearchBar";
+import StoreList from "../components/StoreList";
 
 class Home extends React.Component {
   state = {
-    isLoading: true,
-    stores: [],
+    isLoading: false,
   };
 
-  async componentDidMount() {
-    const { data } = await StoreApi.getList();
-    this.setState({ stores: data, isLoading: false });
-  }
-
   render() {
-    const { isLoading, stores } = this.state;
+    const { isLoading } = this.state;
     return (
       <section className="container">
         {isLoading ? (
@@ -32,12 +25,7 @@ class Home extends React.Component {
             <Navigation />
             <Banner />
             <SearchBar />
-            <div className="stores">
-              {stores.map((store) => {
-                console.log(store);
-                return <Store key={store.storeId} store={store} />;
-              })}
-            </div>
+            <StoreList />
           </div>
         )}
       </section>
