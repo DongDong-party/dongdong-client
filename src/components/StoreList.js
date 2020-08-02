@@ -5,17 +5,17 @@ import StoreApi from "../api/StoreApi";
 
 function StoreItem({ store }) {
   return (
-    <div className="storeComponent">
-      <div className="storeImageSection">
+    <div className="store-component">
+      <div className="store-image-section">
         <img
-          className="storeCoverImage"
+          className="store-cover-image"
           src={
             ImageLoader.getPath() +
             "cf8b8554-09ab-406b-845f-2e55a8630386KakaoTalk_Photo_2020-07-17-14-29-52.png"
           }
         />
       </div>
-      <div className="storeInfoSection">
+      <div className="store-info-section">
         <ul>
           <li>{store.name}</li>
           <li>{store.address.city}</li>
@@ -25,7 +25,7 @@ function StoreItem({ store }) {
       </div>
 
       <style jsx>{`
-        .storeComponent {
+        .store-component {
           position: relative;
           width: 30%;
           height: 0;
@@ -36,7 +36,7 @@ function StoreItem({ store }) {
           box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2);
         }
 
-        .storeComponent .storeImageSection {
+        .store-component .store-image-section {
           position: absolute;
           top: 0;
           left: 0;
@@ -44,7 +44,7 @@ function StoreItem({ store }) {
           height: 67%;
         }
 
-        .storeComponent .storeImageSection .storeCoverImage {
+        .store-component .store-image-section .store-cover-image {
           position: absolute;
           top: 0;
           left: 0;
@@ -52,7 +52,7 @@ function StoreItem({ store }) {
           height: 100%;
         }
 
-        .storeComponent .storeInfoSection {
+        .store-component .store-info-section {
           position: absolute;
           bottom: 0;
           left: 0;
@@ -77,7 +77,7 @@ function StoreList() {
   }, []);
 
   return (
-    <div className="storeListContainer">
+    <div className="store-list-container">
       <div className="stores">
         {storeList.map((store) => {
           return <StoreItem key={store.storeId} store={store} />;
