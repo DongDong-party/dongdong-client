@@ -21,8 +21,7 @@ function SearchBar() {
           width: 40%;
           height: 50%;
           border-radius: 5px;
-          border: 0.3px solid rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2);
+          border: 0.3px solid #707070;
           display: inline-block;
         }
 
