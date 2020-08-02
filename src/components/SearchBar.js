@@ -15,6 +15,7 @@ function SearchBar() {
           width: 100%;
           height: 50px;
           text-align: center;
+          border: 1px solid black;
         }
 
         .search-bar-container .search-bar-wrapper {

@@ -10,7 +10,9 @@ function Navigation({ store }) {
       </div>
 
       <style jsx>{`
-        .navigation {
+        .navigation-container {
+          width: 100%;
+          height: 50px;
         }
       `}</style>
     </div>

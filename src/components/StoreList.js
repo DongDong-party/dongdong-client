@@ -33,7 +33,6 @@ function StoreItem({ store }) {
           overflow: hidden;
           padding-bottom: 20%;
           margin: 5px;
-          border-radius: 5px;
           box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2);
         }
 
