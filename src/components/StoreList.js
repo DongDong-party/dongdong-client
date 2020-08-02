@@ -16,12 +16,13 @@ function StoreItem({ store }) {
         />
       </div>
       <div className="store-info-section">
-        <ul>
-          <li>{store.name}</li>
-          <li>{store.address.city}</li>
-          <li>{store.category}</li>
-          <li>{store.description}</li>
-        </ul>
+        <div className="store-info-base">
+          <h1 className="store-name">{store.name}</h1>
+          <div>{store.address.city}</div>
+          <div>{store.category}</div>
+          <p>{store.description}</p>
+        </div>
+        <div className="store-info-etc"></div>
       </div>
 
       <style jsx>{`
@@ -41,7 +42,7 @@ function StoreItem({ store }) {
           top: 0;
           left: 0;
           width: 100%;
-          height: 67%;
+          height: 70%;
         }
 
         .store-component .store-image-section .store-cover-image {
@@ -57,8 +58,26 @@ function StoreItem({ store }) {
           bottom: 0;
           left: 0;
           width: 100%;
-          height: 33%;
+          height: 30%;
           background-color: white;
+        }
+
+        .store-name {
+          font-size: 20px;
+          margin: 0;
+        }
+
+        .store-info-section .store-info-base {
+          position: absolute;
+          float: left;
+          left: 0;
+          width: 70%;
+          padding: 10px 0px 0px 15px;
+        }
+
+        .store-info-section .store-info-etc {
+          position: absolute;
+          right: 0;
         }
       `}</style>
     </div>
