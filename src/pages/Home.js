@@ -11,13 +11,21 @@ class Home extends React.Component {
   render() {
     return (
       <section className="container">
-        <div>
+        <div className="wrapper">
           <Navigation />
           <Banner />
           <SearchBar />
           <CategoryList />
           <StoreList />
         </div>
+        <style jsx>{`
+          .wrapper {
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid black;
+          }
+        `}</style>
       </section>
     );
   }
