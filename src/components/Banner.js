@@ -3,10 +3,11 @@ import React from "react";
 function Banner({ store }) {
   return (
     <div className="banner-container">
-      <div className="banner">Banner</div>
+      <div className="banner-wrapper">Banner</div>
       <style jsx>{`
-        .banner {
-          border-bottom: 1px solid black;
+        .banner-wrapper {
+          width: 100%;
+          height: 30px;
         }
       `}</style>
     </div>

@@ -6,7 +6,6 @@ function Navigation({ store }) {
       <div className="navigation">Hello Navigation</div>
       <style jsx>{`
         .navigation {
-          border-bottom: 1px solid black;
         }
       `}</style>
     </div>
