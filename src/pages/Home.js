@@ -5,6 +5,8 @@ import Store from "../components/Store";
 
 import "./Home.css";
 import Banner from "../components/Banner";
+import Navigation from "../components/Navigation";
+import SearchBar from "../components/SearchBar";
 
 class Home extends React.Component {
   state = {
@@ -27,7 +29,9 @@ class Home extends React.Component {
           </div>
         ) : (
           <div>
+            <Navigation />
             <Banner />
+            <SearchBar />
             <div className="stores">
               {stores.map((store) => {
                 console.log(store);
