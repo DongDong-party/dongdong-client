@@ -1,5 +1,4 @@
 import React from "react";
-import StoreApi from "../api/StoreApi";
 
 import "./Home.css";
 import Banner from "../components/Banner";

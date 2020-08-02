@@ -5,11 +5,13 @@ import Home from "./pages/Home";
 
 import "./App.css";
 import "./static/style/fonts.css";
+import Login from "./pages/Login";
 
 function App() {
   return (
     <BrowserRouter>
-      <Route path="/" component={Home} />
+      <Route path="/" exact={true} component={Home} />
+      <Route path="/login" component={Login} />
     </BrowserRouter>
   );
 }
