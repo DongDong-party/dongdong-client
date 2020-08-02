@@ -63,6 +63,7 @@ function StoreItem({ store }) {
         }
 
         .store-name {
+          font-family: PAYW-Pro-Bold;
           font-size: 20px;
           margin: 0;
         }
@@ -70,7 +71,7 @@ function StoreItem({ store }) {
         .store-info-section .store-info-base {
           position: absolute;
           float: left;
-          left: 0;
+          :left: 0;
           width: 70%;
           padding: 10px 0px 0px 15px;
         }
