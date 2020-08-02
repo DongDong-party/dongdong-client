@@ -2,7 +2,7 @@ import React from "react";
 
 function Navigation({ store }) {
   return (
-    <div className="navigationContainer">
+    <div className="navigation-container">
       <div className="navigation">Hello Navigation</div>
       <style jsx>{`
         .navigation {
