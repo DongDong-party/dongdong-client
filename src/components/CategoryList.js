@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import CategoryApi from "../api/CategoryApi";
 
-function CategoryItem() {
+function CategoryItem({ name }) {
   return (
     <div className="category-item-container">
-      <div className="category-item">Category Item</div>
+      <div className="category-item">Category Item is {name}</div>
       <style jsx>{`
         .category-item-container {
           width: 210px;
@@ -20,16 +21,25 @@ function CategoryItem() {
 }
 
 function CategoryList() {
+  const [categoryList, setCategoryList] = useState([]);
+
+  useEffect(() => {
+    const init = async () => {
+      const { data } = await CategoryApi.getList();
+      setCategoryList(data);
+    };
+    init();
+  }, []);
+
   return (
     <div className="category-list-container">
       <div>옆으로 넘겨 주세요 ></div>
       <div className="categories">
-        <CategoryItem />
-        <CategoryItem />
-        <CategoryItem />
-        <CategoryItem />
-        <CategoryItem />
-        <CategoryItem />
+        {categoryList.map((category) => {
+          return (
+            <CategoryItem key={category.categoryId} name={category.name} />
+          );
+        })}
       </div>
       <style jsx>{`
         .category-list-container {
