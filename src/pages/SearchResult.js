@@ -14,6 +14,7 @@ class SearchResult extends React.Component {
     query: {},
   };
 
+  // =====초기화===== //
   async initState() {
     const query = await QueryManager.getQueryStringObject();
     this.setState({ query, isLoading: false });
@@ -21,6 +22,15 @@ class SearchResult extends React.Component {
   componentDidMount() {
     this.initState();
   }
+
+  // =====핸들러 함수===== //
+  handleSearch = (data) => {
+    this.setState({ query: { keyword: data.keyword } }, () =>
+      console.log("다시 API CALL")
+    );
+  };
+
+  // =======렌더링======= //
   render() {
     const { isLoading, query } = this.state;
 
@@ -31,7 +41,7 @@ class SearchResult extends React.Component {
         ) : (
           <div className="wrapper">
             <Navigation />
-            <SearchBar />
+            <SearchBar handleSearch={this.handleSearch} />
             <StoreList query={query} />
           </div>
         )}

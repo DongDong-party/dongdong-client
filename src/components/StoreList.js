@@ -86,6 +86,7 @@ function StoreItem({ store }) {
 
 function StoreList({ query }) {
   const [storeList, setStoreList] = useState([]);
+  console.log("리스트 ", query);
 
   useEffect(() => {
     const init = async () => {
