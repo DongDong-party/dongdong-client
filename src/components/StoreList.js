@@ -11,7 +11,7 @@ function StoreItem({ store }) {
           className="store-cover-image"
           src={
             ImageLoader.getPath() +
-            "cf8b8554-09ab-406b-845f-2e55a8630386KakaoTalk_Photo_2020-07-17-14-29-52.png"
+            "2cb5912e-82ec-437c-992f-54750aadfebcKakaoTalk_Photo_2020-07-17-14-29-52.png"
           }
         />
       </div>

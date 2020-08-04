@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./home.css";
+import "../assets/scss/home.scss";
 import Banner from "../components/Banner";
 import Navigation from "../components/Navigation";
 import SearchBar from "../components/SearchBar";
@@ -27,14 +27,6 @@ class Home extends React.Component {
           <CategoryList />
           <StoreList />
         </div>
-        <style jsx>{`
-          .wrapper {
-            width: 95%;
-            margin-left: auto;
-            margin-right: auto;
-            border: 1px solid black;
-          }
-        `}</style>
       </section>
     );
   }
