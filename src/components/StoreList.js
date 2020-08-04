@@ -84,12 +84,12 @@ function StoreItem({ store }) {
   );
 }
 
-function StoreList() {
+function StoreList({ query }) {
   const [storeList, setStoreList] = useState([]);
 
   useEffect(() => {
     const init = async () => {
-      const { data } = await StoreApi.getList();
+      const { data } = await StoreApi.getData(query);
       setStoreList(data);
     };
     init();
