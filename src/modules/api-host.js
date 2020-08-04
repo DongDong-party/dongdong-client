@@ -1,6 +1,6 @@
 class ApiHost {
   static getHost() {
-    return "http://localhost:8080/";
+    return "http://54.180.121.159:8080/";
   }
 }
 
