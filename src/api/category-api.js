@@ -1,5 +1,5 @@
 import axios from "axios";
-import ApiHost from "../modules/ApiHost";
+import ApiHost from "../modules/api-host";
 
 class CategoryApi {
   static async getList() {

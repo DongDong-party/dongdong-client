@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import CategoryApi from "../api/CategoryApi";
+import CategoryApi from "../api/category-api";
 import { Link } from "react-router-dom";
-import QueryManager from "../modules/QueryManager";
+import QueryManager from "../modules/query-manager";
 
 function CategoryItem({ id, name }) {
   const queryParams = QueryManager.makeQueryString({ categoryId: id });

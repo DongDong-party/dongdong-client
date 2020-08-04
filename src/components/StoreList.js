@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-import ImageLoader from "../modules/ImageLoader";
-import StoreApi from "../api/StoreApi";
+import ImageLoader from "../modules/image-loader";
+import StoreApi from "../api/store-api";
 
 function StoreItem({ store }) {
   return (

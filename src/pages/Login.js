@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./Home.css";
-
 import Navigation from "../components/Navigation";
 
 class Login extends React.Component {

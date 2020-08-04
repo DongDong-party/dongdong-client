@@ -1,12 +1,12 @@
 import React from "react";
 import { Route, BrowserRouter } from "react-router-dom";
 
-import Home from "./pages/Home";
+import Home from "./pages/home";
 
 import "./App.css";
 import "./static/style/fonts.css";
-import Login from "./pages/Login";
-import SearchResult from "./pages/SearchResult";
+import Login from "./pages/login";
+import SearchResult from "./pages/search-result";
 
 function App() {
   return (

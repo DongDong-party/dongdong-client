@@ -1,6 +1,6 @@
 import axios from "axios";
-import ApiHost from "../modules/ApiHost";
-import QueryManager from "../modules/QueryManager";
+import ApiHost from "../modules/api-host";
+import QueryManager from "../modules/query-manager";
 
 class StoreApi {
   static async getData(query) {

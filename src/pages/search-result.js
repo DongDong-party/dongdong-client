@@ -1,8 +1,6 @@
 import React from "react";
 
-import "./Home.css";
-
-import QueryManager from "../modules/QueryManager";
+import QueryManager from "../modules/query-manager";
 
 import Navigation from "../components/Navigation";
 import SearchBar from "../components/SearchBar";

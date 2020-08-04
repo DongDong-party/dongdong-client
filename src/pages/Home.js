@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./Home.css";
+import "./home.css";
 import Banner from "../components/Banner";
 import Navigation from "../components/Navigation";
 import SearchBar from "../components/SearchBar";
