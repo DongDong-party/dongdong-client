@@ -1,4 +1,4 @@
-class QueryParser {
+class QueryManager {
   static getQueryStringObject() {
     var queryString = window.location.search.substr(1).split("&");
     if (queryString == "") return {};
@@ -10,6 +10,12 @@ class QueryParser {
     }
     return queryObject;
   }
+
+  static makeQueryString(obj) {
+    return Object.entries(obj)
+      .map((e) => e.join("="))
+      .join("&");
+  }
 }
 
-export default QueryParser;
+export default QueryManager;

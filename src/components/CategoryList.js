@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from "react";
 import CategoryApi from "../api/CategoryApi";
+import { Link } from "react-router-dom";
+import QueryManager from "../modules/QueryManager";
 
-function CategoryItem({ name }) {
+function CategoryItem({ id, name }) {
+  const queryParams = QueryManager.makeQueryString({ categoryId: id });
+  const searchLink = "/search?" + queryParams;
   return (
     <div className="category-item-container">
-      <div className="category-item">Category Item is {name}</div>
+      <Link to={searchLink}>
+        <div className="category-item">Category Item is {name}</div>
+      </Link>
       <style jsx>{`
         .category-item-container {
           width: 210px;
@@ -37,7 +43,11 @@ function CategoryList() {
       <div className="categories">
         {categoryList.map((category) => {
           return (
-            <CategoryItem key={category.categoryId} name={category.name} />
+            <CategoryItem
+              key={category.categoryId}
+              id={category.categoryId}
+              name={category.name}
+            />
           );
         })}
       </div>

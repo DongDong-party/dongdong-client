@@ -1,5 +1,6 @@
 import axios from "axios";
 import ApiHost from "../modules/ApiHost";
+import QueryManager from "../modules/QueryManager";
 
 class StoreApi {
   static async getData(query) {
@@ -17,9 +18,7 @@ class StoreApi {
   }
 
   static async search(query) {
-    const queryString = Object.entries(query)
-      .map((e) => e.join("="))
-      .join("&");
+    const queryString = QueryManager.makeQueryString(query);
 
     return await axios.get(
       ApiHost.getHost() + "api/v1/store/search?" + queryString

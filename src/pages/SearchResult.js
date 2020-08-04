@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Home.css";
 
-import QueryParser from "../modules/QueryParser";
+import QueryManager from "../modules/QueryManager";
 
 import Navigation from "../components/Navigation";
 import SearchBar from "../components/SearchBar";
@@ -15,7 +15,7 @@ class SearchResult extends React.Component {
   };
 
   async initState() {
-    const query = await QueryParser.getQueryStringObject();
+    const query = await QueryManager.getQueryStringObject();
     this.setState({ query, isLoading: false });
   }
   componentDidMount() {
