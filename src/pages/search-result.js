@@ -1,21 +1,19 @@
 import React from "react";
 
-import QueryManager from "../modules/query-manager";
-
 import Navigation from "../components/Navigation";
 import SearchBar from "../components/SearchBar";
 import StoreList from "../components/StoreList";
 
 class SearchResult extends React.Component {
   state = {
-    isLoading: true,
     query: {},
   };
 
   // =====초기화===== //
   async initState() {
-    const query = await QueryManager.getQueryStringObject();
-    this.setState({ query, isLoading: false });
+    if (this.props.history.location.state) {
+      this.setState({ query: this.props.history.location.state });
+    }
   }
   componentDidMount() {
     this.initState();
@@ -23,27 +21,25 @@ class SearchResult extends React.Component {
 
   // =====핸들러 함수===== //
   handleSearch = (data) => {
-    this.setState(() => ({ query: { keyword: data.keyword } }));
+    this.setState(() => ({
+      query: { categoryId: this.state.query.categoryId, keyword: data.keyword },
+    }));
   };
 
   // =======렌더링======= //
   render() {
-    const { isLoading, query } = this.state;
+    const { query } = this.state;
 
     return (
       <section className="container">
-        {isLoading ? (
-          <div className="loader"></div>
-        ) : (
-          <div className="wrapper">
-            <Navigation />
-            <SearchBar
-              handleSearch={this.handleSearch}
-              keyword={this.state.query.keyword}
-            />
-            <StoreList query={query} />
-          </div>
-        )}
+        <div className="wrapper">
+          <Navigation />
+          <SearchBar
+            handleSearch={this.handleSearch}
+            keyword={this.state.query.keyword}
+          />
+          <StoreList query={query} />
+        </div>
 
         <style jsx>{`
           .wrapper {

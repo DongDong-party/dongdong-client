@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
 import CategoryApi from "../api/category-api";
 import { Link } from "react-router-dom";
-import QueryManager from "../modules/query-manager";
 
 function CategoryItem({ id, name }) {
-  const queryParams = QueryManager.makeQueryString({ categoryId: id });
-  const searchLink = "/search?" + queryParams;
   return (
     <div className="category-item-container">
-      <Link to={searchLink}>
+      <Link to={{ pathname: "/search", state: { categoryId: id } }}>
         <div className="category-item">Category Item is {name}</div>
       </Link>
       <style jsx>{`

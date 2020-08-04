@@ -4,6 +4,7 @@ import QueryManager from "../modules/query-manager";
 
 class StoreApi {
   static async getData(query) {
+    console.log(query, "call");
     if (query === undefined) {
       // 쿼리가 없으면 전체 리스트
       return await this.getList();

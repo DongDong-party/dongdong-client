@@ -85,6 +85,7 @@ function StoreItem({ store }) {
 }
 
 function StoreList({ query }) {
+  console.log(query);
   const [storeList, setStoreList] = useState([]);
 
   useEffect(() => {
@@ -93,7 +94,7 @@ function StoreList({ query }) {
       setStoreList(data);
     };
     init();
-  }, []);
+  }, [query]);
 
   return (
     <div className="store-list-container">

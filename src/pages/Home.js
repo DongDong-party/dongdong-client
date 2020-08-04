@@ -10,10 +10,7 @@ import CategoryList from "../components/CategoryList";
 class Home extends React.Component {
   // =====핸들러 함수===== //
   handleSearch = (data) => {
-    this.props.history.push({
-      pathname: "/search",
-      search: `?keyword=${data.keyword}`,
-    });
+    this.props.history.push("/search", { keyword: data.keyword });
   };
 
   // =======렌더링======= //

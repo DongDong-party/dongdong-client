@@ -20,8 +20,6 @@ class SearchBar extends React.Component {
       this.props.handleSearch({ keyword: inputBox.value });
       e.preventDefault();
     }
-
-    console.log(this.state);
   };
 
   // =====렌더링===== //
