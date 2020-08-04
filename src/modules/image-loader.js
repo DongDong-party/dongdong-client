@@ -1,6 +1,6 @@
 class ImageLoader {
   static getPath() {
-    return "http://localhost:8080/upload/image/";
+    return "https://dongdong-party.s3.ap-northeast-2.amazonaws.com/userImage/";
   }
 }
 
