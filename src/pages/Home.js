@@ -6,14 +6,14 @@ import Navigation from "../components/Navigation";
 import SearchBar from "../components/SearchBar";
 import StoreList from "../components/StoreList";
 import CategoryList from "../components/CategoryList";
-import { Link } from "react-router-dom";
 
 class Home extends React.Component {
   // =====핸들러 함수===== //
   handleSearch = (data) => {
-    this.setState({ query: { keyword: data.keyword } }, () =>
-      console.log("검색 페이지로 이동")
-    );
+    this.props.history.push({
+      pathname: "/search",
+      search: `?keyword=${data.keyword}`,
+    });
   };
 
   // =======렌더링======= //

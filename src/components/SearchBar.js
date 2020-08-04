@@ -12,12 +12,16 @@ class SearchBar extends React.Component {
 
   // ===이벤트핸들러=== //
   enterkey = (e) => {
+    const inputBox = document.getElementById("searchInput");
+    const value = inputBox.value;
+
     if (window.event.keyCode == 13) {
-      const inputBox = document.getElementById("searchInput");
-      this.setState({ keyword: inputBox.value });
+      this.setState({ keyword: value });
       this.props.handleSearch({ keyword: inputBox.value });
       e.preventDefault();
     }
+
+    console.log(this.state);
   };
 
   // =====렌더링===== //

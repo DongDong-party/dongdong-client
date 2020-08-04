@@ -23,9 +23,7 @@ class SearchResult extends React.Component {
 
   // =====핸들러 함수===== //
   handleSearch = (data) => {
-    this.setState({ query: { keyword: data.keyword } }, () =>
-      console.log("다시 API CALL")
-    );
+    this.setState(() => ({ query: { keyword: data.keyword } }));
   };
 
   // =======렌더링======= //
@@ -39,7 +37,10 @@ class SearchResult extends React.Component {
         ) : (
           <div className="wrapper">
             <Navigation />
-            <SearchBar handleSearch={this.handleSearch} />
+            <SearchBar
+              handleSearch={this.handleSearch}
+              keyword={this.state.query.keyword}
+            />
             <StoreList query={query} />
           </div>
         )}
