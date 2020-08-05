@@ -8,14 +8,6 @@ function Navigation({ store }) {
         <Link to="/">홈</Link>
         <Link to="/login">로그인</Link>
       </div>
-
-      <style jsx>{`
-        .navigation-container {
-          width: 100%;
-          height: 50px;
-          border-bottom: 1px solid black;
-        }
-      `}</style>
     </div>
   );
 }

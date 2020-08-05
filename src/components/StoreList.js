@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import ImageLoader from "../modules/image-loader";
 import StoreApi from "../api/store-api";
+import "../assets/scss/components/store_list.scss";
 
 function StoreItem({ store }) {
   return (
@@ -13,6 +14,7 @@ function StoreItem({ store }) {
             ImageLoader.getPath() +
             "2cb5912e-82ec-437c-992f-54750aadfebcKakaoTalk_Photo_2020-07-17-14-29-52.png"
           }
+          alt=""
         />
       </div>
       <div className="store-info-section">
@@ -24,62 +26,6 @@ function StoreItem({ store }) {
         </div>
         <div className="store-info-etc"></div>
       </div>
-
-      <style jsx>{`
-        .store-component {
-          position: relative;
-          width: 30%;
-          height: 0;
-          overflow: hidden;
-          padding-bottom: 20%;
-          margin: 5px;
-          box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2);
-        }
-
-        .store-component .store-image-section {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 70%;
-        }
-
-        .store-component .store-image-section .store-cover-image {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-        }
-
-        .store-component .store-info-section {
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 30%;
-          background-color: white;
-        }
-
-        .store-name {
-          font-family: PAYW-Pro-Bold;
-          font-size: 20px;
-          margin: 0;
-        }
-
-        .store-info-section .store-info-base {
-          position: absolute;
-          float: left;
-          :left: 0;
-          width: 70%;
-          padding: 10px 0px 0px 15px;
-        }
-
-        .store-info-section .store-info-etc {
-          position: absolute;
-          right: 0;
-        }
-      `}</style>
     </div>
   );
 }
@@ -103,15 +49,6 @@ function StoreList({ query }) {
           return <StoreItem key={store.storeId} store={store} />;
         })}
       </div>
-
-      <style jsx>{`
-        .stores {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
-          align-content: center;
-        }
-      `}</style>
     </div>
   );
 }

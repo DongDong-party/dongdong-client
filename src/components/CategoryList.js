@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CategoryApi from "../api/category-api";
 import { Link } from "react-router-dom";
+import "../assets/scss/components/category_list.scss";
 
 function CategoryItem({ id, name }) {
   return (
@@ -8,17 +9,6 @@ function CategoryItem({ id, name }) {
       <Link to={{ pathname: "/search", state: { categoryId: id } }}>
         <div className="category-item">Category Item is {name}</div>
       </Link>
-      <style jsx>{`
-        .category-item-container {
-          width: 210px;
-          height: 130px;
-          border: 1px solid red;
-          margin: 10px 17px;
-          display: inline-block;
-        }
-        .category-item {
-        }
-      `}</style>
     </div>
   );
 }
@@ -48,26 +38,6 @@ function CategoryList() {
           );
         })}
       </div>
-      <style jsx>{`
-        .category-list-container {
-          width: 100%;
-          height: 170px;
-          border-bottom: 1px solid black;
-        }
-
-        .categories {
-          white-space: nowrap;
-          overflow-x: auto;
-          overflow-y: hidden;
-          width: 80%;
-          height: 150px;
-          margin: 0 auto;
-        }
-
-        .categories::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
     </div>
   );
 }
