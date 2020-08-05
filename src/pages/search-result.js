@@ -4,7 +4,7 @@ import Navigation from "../components/Navigation";
 import SearchBar from "../components/SearchBar";
 import StoreList from "../components/StoreList";
 
-import "../assets/scss/page/search_result.scss";
+import "../assets/scss/pages/search_result.scss";
 
 class SearchResult extends React.Component {
   state = {

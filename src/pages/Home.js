@@ -1,6 +1,6 @@
 import React from "react";
 
-import "../assets/scss/home.scss";
+import "../assets/scss/pages/home.scss";
 import Banner from "../components/Banner";
 import Navigation from "../components/Navigation";
 import SearchBar from "../components/SearchBar";
