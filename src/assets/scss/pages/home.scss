@@ -1,6 +1,13 @@
-.stores {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
+.home-container {
+  .home-wrapper {
+    min-height: calc(100vh - 10rem);
+
+    .body-wrapper {
+      width: calc(100% - 2.5rem);
+      max-width: 65rem;
+      margin: auto;
+      padding: 1.5rem 0 0 0;
+      position: relative;
+    }
+  }
 }

@@ -1,27 +1,44 @@
+@import '../global/global-color.scss';
+
 .search-bar-container {
-    width: 100%;
-    height: 50px;
-    text-align: center;
-    border-bottom: 1px solid black;
-  }
+  display: flex;
+  position: relative;
+  width: 100%;
+  margin: 1em 0 4em 0;
 
-  .search-bar-container .search-bar-wrapper {
-    width: 40%;
-    height: 50%;
-    border-radius: 5px;
-    border: 0.3px solid #707070;
-    display: inline-block;
-  }
-
-  .search-bar-container .search-bar-wrapper .search-bar {
-    border-radius: 5px;
-    width: 90%;
-    height: 100%;
-    border: none;
+  .search-bar {
     background: transparent;
-  }
+    font-size: 1.1875rem;
+    line-height: 25px;
+    font-weight: 400;
+    font-family: inherit;
+    -webkit-appearance: none;
+    border: 1px solid $border-gray;
+    border-radius: $dongdong-radius;
+    box-shadow: $dongdong-shadow;
+    transition: border 0.3s ease;
+    width: 100%;
+    padding: 0.7rem 4rem 0.7rem 1.5rem;
 
-  .search-bar:focus {
-    outline: none;
+    &:focus {
+      outline: none;
+    }
   }
-  
+  .search-icon-wrapper {
+    position: absolute;
+    right: 0.5rem;
+    width: 3rem;
+    height: 3rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    svg {
+      width: 2em;
+      height: 2rem;
+    }
+  }
+}
