@@ -1,8 +1,10 @@
 import React from "react";
 
-import Navigation from "../components/Navigation";
+import Navigation from "../components/nav/Navigation";
 import SearchBar from "../components/SearchBar";
 import StoreList from "../components/StoreList";
+
+import "../assets/scss/pages/search_result.scss";
 
 class SearchResult extends React.Component {
   state = {
@@ -40,15 +42,6 @@ class SearchResult extends React.Component {
           />
           <StoreList query={query} />
         </div>
-
-        <style jsx>{`
-          .wrapper {
-            width: 95%;
-            margin-left: auto;
-            margin-right: auto;
-            border: 1px solid black;
-          }
-        `}</style>
       </section>
     );
   }

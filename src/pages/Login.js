@@ -1,6 +1,6 @@
 import React from "react";
 
-import Navigation from "../components/Navigation";
+import Navigation from "../components/nav/Navigation";
 
 class Login extends React.Component {
   render() {
