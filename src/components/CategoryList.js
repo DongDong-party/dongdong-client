@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
-import CategoryApi from "../api/category-api";
-import { Link } from "react-router-dom";
-import "../assets/scss/components/category_list.scss";
+import React, { useState, useEffect } from 'react';
+import CategoryApi from '../api/category-api';
+import { Link } from 'react-router-dom';
+import '../assets/scss/components/category_list.scss';
 
 function CategoryItem({ id, name }) {
   return (
-    <div className="category-item-container">
-      <Link to={{ pathname: "/search", state: { categoryId: id } }}>
+    <Link to={{ pathname: '/search', state: { categoryId: id } }}>
+      <button className="category-item-container">
         <div className="category-item">Category Item is {name}</div>
-      </Link>
-    </div>
+      </button>
+    </Link>
   );
 }
 
@@ -26,7 +26,6 @@ function CategoryList() {
 
   return (
     <div className="category-list-container">
-      <div>옆으로 넘겨 주세요 ></div>
       <div className="categories">
         {categoryList.map((category) => {
           return (
