@@ -35,18 +35,20 @@ function StoreList({ query }) {
   const [storeList, setStoreList] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
   useEffect(() => {
     const init = async () => {
       try {
-        setError(null);
         setStoreList(null);
         setLoading(true);
+        setError(null);
 
         const { data } = await StoreApi.getData(query);
         setStoreList(data);
       } catch (e) {
+        setLoading(true);
         setError(e);
+        setStoreList(null);
+
         console.log(e);
       }
       setLoading(false);
@@ -57,6 +59,7 @@ function StoreList({ query }) {
   if (loading) return <div>로딩중..</div>;
   if (error) return <div>에러가 발생했습니다.</div>;
   if (!storeList) return null;
+
   return (
     <div className="store-wrapper">
       {storeList.map((store) => {
