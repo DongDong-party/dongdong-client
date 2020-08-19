@@ -1,14 +1,16 @@
+import React from 'react';
 import axios from 'axios';
 import ApiHost from '../modules/api-host';
 import QueryManager from '../modules/query-manager';
 
-class StoreApi {
+class StoreApi extends React.Component {
   static async getData(query) {
     // console.log(query, 'call');
     console.log(query);
     try {
-      if (query === undefined) {
+      if (!query || !query.categoryId) {
         console.log('전체리스트');
+
         // 쿼리가 없으면 전체 리스트
         return await this.getList();
       } else {
