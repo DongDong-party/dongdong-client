@@ -1,0 +1,200 @@
+// fonts
+@font-face {
+  font-family: 'PAYW-Pro-Bold';
+  src: url('/src/assets/fonts/PAYW-Pro-Bold.woff') format('woff');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PAYW-Pro-ExtraLight';
+  src: url('/src/assets/fonts/PAYW-Pro-ExtraLight.woff') format('woff');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PAYW-Pro-Light';
+  src: url('/src/assets/fonts/PAYW-Pro-Light.woff') format('woff');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PAYW-Pro-Medium';
+  src: url('/src/assets/fonts/PAYW-Pro-Medium.woff') format('woff');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PAYW-Pro-Regular';
+  src: url('/src/assets/fonts/PAYW-Pro-Regular.woff') format('woff');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PAYW-Pro-SemiBold';
+  src: url('/src/assets/fonts/PAYW-Pro-SemiBold.woff') format('woff');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'PAYW-Pro-Thin';
+  src: url('/src/assets/fonts/PAYW-Pro-Thin.woff') format('woff');
+  font-style: normal;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+  font-family: PAYW Pro, PAYW Pro KR, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue,
+    sans-serif;
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word;
+  word-break: keep-all;
+  font-size: 1rem;
+  overflow-anchor: none;
+  color: #222;
+  -webkit-transition: opacity 0.7s ease;
+  transition: opacity 0.7s ease;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  outline: none;
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+  &:before,
+  &:after {
+    content: '';
+    content: none;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}

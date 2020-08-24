@@ -1,20 +1,25 @@
-import React from "react";
+import React from 'react';
 
-import Navigation from "../components/Navigation";
-import SearchBar from "../components/SearchBar";
-import StoreList from "../components/StoreList";
+import Navigation from '../components/nav/Navigation';
+import SearchBar from '../components/SearchBar';
+import StoreList from '../components/StoreList';
+
+import '../assets/scss/pages/search_result.scss';
 
 import "../assets/scss/pages/search_result.scss";
 
 class SearchResult extends React.Component {
-  state = {
-    query: {},
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      query: this.props.history.location.state,
+    };
+  }
 
   // =====초기화===== //
   async initState() {
     if (this.props.history.location.state) {
-      this.setState({ query: this.props.history.location.state });
+      this.setState({ query: this.props.location.state });
     }
   }
   componentDidMount() {
