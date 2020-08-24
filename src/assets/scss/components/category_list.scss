@@ -1,43 +1,43 @@
 .category-list-container {
-    width: 100%;
-    margin: 3em 0;
+  width: 100%;
+  margin: 3em 0;
 
-    .categories {
-        margin: 0 auto;
-        display: grid;
-        grid-gap: 1.2181818182rem;
-        grid-template-columns: repeat(auto-fill,minmax(12rem,1fr));
-            
-        .category-item-container {
-            cursor: pointer;
-            flex: 1 1;
-            text-align: left;
-            background-color: #fff;
-            border-radius: .7rem;
-            -webkit-box-shadow: 0 0.125rem 0.3125rem rgba(0,0,0,.12);
-            box-shadow: 0 0.125rem 0.3125rem rgba(0,0,0,.12);
-            position: relative;
-            display: -ms-flexbox;
-            display: flex;
-            -ms-flex-align: center;
-            align-items: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            -ms-flex-item-align: start;
-            align-self: flex-start;
-            min-height: 5.5rem;
-            padding: 1.5rem;
-            -webkit-transition: opacity .15s ease;
-            transition: opacity .15s ease;
-            margin: 0 auto;
-            min-width: 200px;
-            
-            &:hover {
-                opacity: .7;
-            }
-            
-            .category-item {
-            }
-        }
+  .categories {
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1.2181818182rem;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+
+    .category-item-container {
+      cursor: pointer;
+      flex: 1 1;
+      text-align: left;
+      background-color: #fff;
+      border-radius: 0.7rem;
+      -webkit-box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.12);
+      box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.12);
+      position: relative;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-item-align: start;
+      align-self: flex-start;
+      min-height: 5.5rem;
+      padding: 1.5rem;
+      -webkit-transition: opacity 0.15s ease;
+      transition: opacity 0.15s ease;
+      margin: 0 auto;
+      min-width: 200px;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      .category-item {
+      }
     }
+  }
 }

@@ -6,6 +6,8 @@ import StoreList from '../components/StoreList';
 
 import '../assets/scss/pages/search_result.scss';
 
+import "../assets/scss/pages/search_result.scss";
+
 class SearchResult extends React.Component {
   constructor(props) {
     super(props);

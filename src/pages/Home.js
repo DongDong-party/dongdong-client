@@ -10,7 +10,7 @@ import '../assets/scss/pages/home.scss';
 
 class Home extends React.Component {
   // =====핸들러 함수===== //
-  handleSearch = data => {
+  handleSearch = (data) => {
     this.props.history.push('/search', { keyword: data.keyword });
   };
 
